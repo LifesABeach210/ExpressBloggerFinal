@@ -12,7 +12,9 @@ let validateUserData = (
 if (userData.email) {
     const checkEmail = userData.email;
    const checkSplit =  checkEmail.split('@',2)
-
+  if (checkSplit[0].includes('@')&&checkSplit[1].includes('@')) {
+      return{isValid:false,message:'may only contain one @ symbol'}
+  }
 
 }
 
